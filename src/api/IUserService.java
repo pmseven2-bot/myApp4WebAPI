@@ -6,11 +6,11 @@ public interface IUserService {
 
 	List<User> getAllUsers();
 
-	User getUserById(long id);
+	User getUserById(String id);
 
 	User addUser(User user);
 
-	User updateUser(long id, User updatedUser);
+	User updateUser(String id, User updatedUser);
 
-	boolean deleteUser(long id);
+	boolean deleteUser(String id);
 }

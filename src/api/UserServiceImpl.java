@@ -11,14 +11,14 @@ public class UserServiceImpl implements IUserService{
 	}
 	@Override
 	public List<User> getAllUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repo.getAllUsers();
 	}
 
 	@Override
-	public User getUserById(long id) {
+	public User getUserById(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.getUserById(id);
 	}
 
 	@Override
@@ -44,9 +44,11 @@ public class UserServiceImpl implements IUserService{
 	}
 
 	@Override
-	public boolean deleteUser(long id) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean deleteUser(String id) {
+		if(repo.getUserById(id) == null) {
+			throw new IllegalArgumentException("User not found: " + id);
+		}
+		return repo.deleteUser(id);
 	}
 
 }
