@@ -7,7 +7,6 @@ public class User {
 	private String city;
 	private String phone;
 	private String ageGroup;
-	
 	private String id;
 	private Status status;
 
