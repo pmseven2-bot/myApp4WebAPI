@@ -11,7 +11,7 @@ public class User {
 	private String id;
 	private Status status;
 
-	public User(String id, String firstName, String lastName, String city, String phone, String ageGroup, String status) {
+	public User(String id, String firstName, String lastName, String city, String phone, String ageGroup, Status status) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -65,7 +65,7 @@ public class User {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 
